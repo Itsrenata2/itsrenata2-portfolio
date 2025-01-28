@@ -11,6 +11,7 @@ module.exports = {
         main: "#824D5C",
         secondary: "#C1A3A1",
         third: "#F5EFEB",
+        fourth: "#EDD7D6",
       },
     },
   },

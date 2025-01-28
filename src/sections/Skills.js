@@ -1,0 +1,76 @@
+import GithubSkill from "../images/gh.svg";
+import HTMLSkill from "../images/html.svg";
+import JavaScriptSkill from "../images/js.svg";
+import BootstrapSkill from "../images/bs.svg";
+import TailwindCSSSkill from "../images/tw.svg";
+import CSSSkill from "../images/css.svg";
+
+export function Skills() {
+  const skills = [
+    {
+      icon: GithubSkill,
+      title: "GitHub",
+      text: "Ferramenta importante e necessária para o meu desenvolvimento em projetos.",
+    },
+    {
+      icon: HTMLSkill,
+      title: "HTML",
+      text: "Foi uma das primeiras coisas que aprendi para o desenvolvimento web.",
+    },
+    {
+      icon: JavaScriptSkill,
+      title: "JavaScript",
+      text: "Para complementar o desenvolvimento web, aprendi JS para aplicar lógica e interação as páginas.",
+    },
+    {
+      icon: BootstrapSkill,
+      title: "Bootstrap",
+      text: "Ferramenta importante para o desenvolvimento responsivo.",
+    },
+    {
+      icon: TailwindCSSSkill,
+      title: "Tailwind CSS",
+      text: "Após aprender CSS me interessei a aprender mais e descobri o Tailwind.",
+    },
+    {
+      icon: CSSSkill,
+      title: "CSS",
+      text: "Após o HTML aprendi CSS para obter habilidades em estilização de páginas.",
+    },
+    {
+      icon: CSSSkill,
+      title: "React",
+      text: "Depois de aprender JavaScript o próximo passo foi aprender uma framework.",
+    },
+  ];
+
+  return (
+    <section className="flex flex-col items-start py-12 pr-60 pl-60">
+      <h2 className="text-main font-bold text-3xl font-museomoderno mb-12">
+        Minhas <span className="text-secondary">habilidades</span>
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {skills.map((skill, index) => (
+          <Skill
+            key={index}
+            icon={skill.icon}
+            title={skill.title}
+            text={skill.text}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}
+
+function Skill({ icon, title, text }) {
+  return (
+    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start">
+      <img src={icon} alt={title} className="w-12 h-12 mb-4" />
+      <h4 className="text-lg font-semibold mb-2 text-secondary font-poppins">
+        {title}
+      </h4>
+      <p className="font-poppins text-main font-medium">{text}</p>
+    </div>
+  );
+}
