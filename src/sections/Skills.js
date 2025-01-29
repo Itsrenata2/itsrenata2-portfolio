@@ -4,6 +4,8 @@ import JavaScriptSkill from "../images/js.svg";
 import BootstrapSkill from "../images/bs.svg";
 import TailwindCSSSkill from "../images/tw.svg";
 import CSSSkill from "../images/css.svg";
+import ReactSkill from "../images/react.svg";
+import FigmaSkill from "../images/figma.svg";
 
 export function Skills() {
   const skills = [
@@ -38,9 +40,14 @@ export function Skills() {
       text: "Após o HTML aprendi CSS para obter habilidades em estilização de páginas.",
     },
     {
-      icon: CSSSkill,
+      icon: ReactSkill,
       title: "React",
       text: "Depois de aprender JavaScript o próximo passo foi aprender uma framework.",
+    },
+    {
+      icon: FigmaSkill,
+      title: "Figma",
+      text: "Como me interesso bastante pela parte de design decidi aprender figma para aprimorar meus projetos.",
     },
   ];
 
@@ -65,7 +72,7 @@ export function Skills() {
 
 function Skill({ icon, title, text }) {
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start">
+    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start hover:scale-105">
       <img src={icon} alt={title} className="w-12 h-12 mb-4" />
       <h4 className="text-lg font-semibold mb-2 text-secondary font-poppins">
         {title}

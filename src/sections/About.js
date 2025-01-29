@@ -18,9 +18,27 @@ export function About() {
             Sobre <span className="text-secondary">mim</span>
           </h2>
           <div className="flex gap-2 justify-end mt-2 mb-12">
-            <img src={linkedinIcon} alt="linkedin icon" />
-            <img src={githubIcon} alt="github icon" />
-            <img src={instagramIcon} alt="instagram icon" />
+            <a
+              href="https://www.linkedin.com/in/renata-silva22"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={linkedinIcon} alt="linkedin icon" />
+            </a>
+            <a
+              href="https://github.com/Itsrenata2"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={githubIcon} alt="github icon" />
+            </a>
+            <a
+              href="https://www.instagram.com/_rescripts"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img src={instagramIcon} alt="instagram icon" />
+            </a>
           </div>
         </div>
         <p className="text-main font-semibold font-poppins">

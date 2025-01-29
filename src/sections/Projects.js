@@ -55,7 +55,7 @@ export function Projects() {
   ];
 
   return (
-    <section className="relative bg-fourth py-20 px-10">
+    <section className="relative bg-fourth py-20 px-10 mt-20">
       <img src={BlopUp} alt="shapes" className="absolute left-0 top-0 h-1/6" />
       <img
         src={BlobDown}
@@ -100,7 +100,7 @@ export function Projects() {
 
 function ProjectSoftware({ image, title, subtitle }) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center hover:scale-105">
       <img
         src={image}
         alt={title}
@@ -119,7 +119,7 @@ function ProjectSoftware({ image, title, subtitle }) {
 
 function ProjectDesign({ image, title }) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center">
+    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center hover:scale-105">
       <img
         src={image}
         alt={title}

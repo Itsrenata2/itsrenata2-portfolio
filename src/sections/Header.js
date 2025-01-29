@@ -30,7 +30,11 @@ export function Header() {
           <li>
             <p to="/contact">projetos</p>
           </li>
-          <Button>download CV</Button>
+          <Button asChild>
+            <a href="/curriculo.pdf" download="Renata_Silva_CV.pdf">
+              download CV
+            </a>
+          </Button>
         </ul>
       </nav>
       <div className="flex justify-between">
