@@ -4,7 +4,8 @@ import githubIcon from "../images/github.svg";
 
 export function About() {
   return (
-    <main className="flex justify-between py-24 pr-60 pl-60">
+    <main className="flex justify-between py-16 pr-10 pl-10 sm:px-6 md:px-10">
+      {" "}
       <div className="flex flex-col gap-4 mt-28 w-5/12">
         <InfoWithColor>idade: 21</InfoWithColor>
         <InfoWithoutColor>nacionalidade: brasileira</InfoWithoutColor>
@@ -16,6 +17,7 @@ export function About() {
         <div flex flex-row>
           <h2 className="text-main font-bold text-3xl font-museomoderno">
             Sobre <span className="text-secondary">mim</span>
+            <span className="text-main">.</span>
           </h2>
           <div className="flex gap-2 justify-end mt-2 mb-12">
             <a

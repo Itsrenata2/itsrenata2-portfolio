@@ -62,11 +62,12 @@ export function Projects() {
         alt="shapes"
         className="absolute right-0 bottom-0 h-1/6"
       />
-      <h2 className="text-main font-bold text-4xl font-museomoderno mb-12 text-center">
+      <h2 className="text-main font-bold text-4xl font-museomoderno mb-12 text-center z-10">
         Meus <span className="text-secondary">Projetos</span>
+        <span className="text-main">.</span>
       </h2>
-      <div className="max-w-6xl mx-auto">
-        <h3 className="text-main font-bold text-2xl font-museomoderno mb-6">
+      <div className="max-w-full sm:max-w-5xl md:max-w-6xl mx-auto">
+        <h3 className="text-main font-bold text-2xl font-museomoderno mb-6 z-10 relative">
           Software
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

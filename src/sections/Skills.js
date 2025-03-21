@@ -52,11 +52,12 @@ export function Skills() {
   ];
 
   return (
-    <section className="flex flex-col items-start py-12 pr-60 pl-60">
+    <section className="flex flex-col items-start py-2 pr-10 pl-10 sm:px-6 md:px-10">
       <h2 className="text-main font-bold text-3xl font-museomoderno mb-12">
         Minhas <span className="text-secondary">habilidades</span>
+        <span className="text-main">.</span>
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         {skills.map((skill, index) => (
           <Skill
             key={index}
@@ -72,8 +73,12 @@ export function Skills() {
 
 function Skill({ icon, title, text }) {
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start hover:scale-105">
-      <img src={icon} alt={title} className="w-12 h-12 mb-4" />
+    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start group">
+      <img
+        src={icon}
+        alt={title}
+        className="w-12 h-12 mb-4 transition-transform duration-300 group-hover:scale-110"
+      />
       <h4 className="text-lg font-semibold mb-2 text-secondary font-poppins">
         {title}
       </h4>
