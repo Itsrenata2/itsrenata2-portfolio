@@ -56,11 +56,15 @@ export function Projects() {
 
   return (
     <section className="relative bg-fourth py-20 px-10 mt-20">
-      <img src={BlopUp} alt="shapes" className="absolute left-0 top-0 h-1/6" />
+      <img
+        src={BlopUp}
+        alt="shapes"
+        className="hidden md:absolute left-0 top-0 h-1/6"
+      />
       <img
         src={BlobDown}
         alt="shapes"
-        className="absolute right-0 bottom-0 h-1/6"
+        className="hidden md:absolute right-0 bottom-0 h-1/6"
       />
       <h2 className="text-main font-bold text-4xl font-museomoderno mb-12 text-center z-10">
         Meus <span className="text-secondary">Projetos</span>

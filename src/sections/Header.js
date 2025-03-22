@@ -5,7 +5,7 @@ import profilePicture from "../images/profile-picture.svg";
 export function Header() {
   return (
     <header
-      className="relative py-10 px-6 md:px-20 lg:px-40"
+      className="relative pt-6 pb-20 md:py-10 px-6 md:px-20 lg:px-40"
       style={{
         backgroundImage: `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" width="1440" height="629" viewBox="0 0 1440 629"><path d="M1627 128.053C1627 285.483 1278.61 512.763 844.1 588.481C-826.456 774.99 -59.0574 265.997 -59.0574 108.567C-59.0574 -48.8635 558.992 -157 938.976 -157C1318.96 -157 1627 -29.3774 1627 128.053Z" fill="%23EDD7D6"/><path d="M1627 95.053C1627 252.483 1278.61 479.763 844.1 555.481C-826.456 741.99 -59.0574 232.997 -59.0574 75.567C-59.0574 -81.8635 558.992 -190 938.976 -190C1318.96 -190 1627 -62.3774 1627 95.053Z" fill="%23824D5C"/></svg>')`,
         backgroundSize: "cover",
@@ -49,7 +49,7 @@ export function Header() {
           <img
             src={profilePicture}
             alt="profile"
-            className="w-full max-w-xs md:max-w-md mt-10 md:mt-0"
+            className="w-full max-w-xs md:max-w-md md:mt-0"
           />
         </div>
       </div>
