@@ -7,7 +7,7 @@ export function Message() {
 
   if (state.succeeded) {
     return (
-      <p className="text-main font-bold text-2xl text-center py-14">
+      <p className="text-main font-museomoderno font-bold text-2xl text-center py-14">
         Obrigado por sua mensagem!
       </p>
     );

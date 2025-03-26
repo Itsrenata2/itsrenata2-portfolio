@@ -52,7 +52,10 @@ export function Skills() {
   ];
 
   return (
-    <section className="flex flex-col items-start py-2 pr-10 pl-10 sm:px-6 md:px-10">
+    <section
+      id="habilidades"
+      className="flex flex-col items-start py-2 pr-10 pl-10 sm:px-6 md:px-10"
+    >
       <h2 className="text-main font-bold text-3xl font-museomoderno mb-12">
         Minhas <span className="text-secondary">habilidades</span>
         <span className="text-main">.</span>

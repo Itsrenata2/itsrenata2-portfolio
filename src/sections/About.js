@@ -4,7 +4,10 @@ import githubIcon from "../images/github.svg";
 
 export function About() {
   return (
-    <main className="flex flex-col md:flex-row items-center justify-center text-center md:text-left py-16 px-6 md:px-10 gap-24">
+    <main
+      id="sobre"
+      className="flex flex-col md:flex-row items-center justify-center text-center md:text-left py-16 px-6 md:px-10 md:gap-24"
+    >
       <div className="flex flex-col gap-4 w-full md:w-5/12 text-sm text-center md:text-left">
         <h2 className="text-main font-bold text-3xl font-museomoderno">
           Sobre <span className="text-secondary">mim</span>

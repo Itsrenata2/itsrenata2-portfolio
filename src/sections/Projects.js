@@ -17,21 +17,25 @@ export function Projects() {
       image: TodoList,
       title: "Todo List",
       subtitle: "React e Tailwind CSS",
+      link: "https://github.com/itsrenata2/todo_list",
     },
     {
       image: ClothesShop,
       title: "Clothing Shop",
       subtitle: "React e Tailwind CSS",
+      link: "https://github.com/Itsrenata2/trendy-threads",
     },
     {
       image: BillCalculator,
       title: "Split Bill Calculator",
       subtitle: "JavaScript e Tailwind CSS",
+      link: "https://github.com/itsrenata2/FrontEnd-Mentor-Tip-Calculator",
     },
     {
       image: SignUpForm,
       title: "Sign Up Form",
       subtitle: "JavaScript e Tailwind CSS",
+      link: "https://github.com/itsrenata2/FrontEnd-Mentor-SignUp-Form",
     },
   ];
 
@@ -39,23 +43,27 @@ export function Projects() {
     {
       image: ERP,
       title: "ERP Sistema",
+      link: "https://www.figma.com/design/B9v8jp0ifiOpU1cmNhsec6/ERP-Faturamento?node-id=0-1&t=ykRAxeNBbx3p5z9c-1",
     },
     {
       image: Portfolio,
       title: "Meu Portfolio",
+      link: "https://www.figma.com/design/CG8YwXZ7suEyWp3ZMVsEkQ/Portfolio?node-id=0-1&t=ykRAxeNBbx3p5z9c-1",
     },
     {
       image: LandingPage,
       title: "Landing Page",
+      link: "https://www.figma.com/design/LRXGxbBacHww5Ohi1JWQZI/3A---Landing-Page?node-id=0-1&t=Z56ajKVut34wZuXf-1",
     },
     {
       image: Dashboard,
       title: "Dashboard",
+      link: "https://www.figma.com/design/GdHAPDspxFnCHblIudLYTi/Dashboard---AMT?t=89d2h4axRxoXlZ6W-1",
     },
   ];
 
   return (
-    <section className="relative bg-fourth py-20 px-10 mt-20">
+    <section id="projetos" className="relative bg-fourth py-20 px-10 mt-20">
       <img
         src={BlopUp}
         alt="shapes"
@@ -81,6 +89,7 @@ export function Projects() {
               image={project.image}
               title={project.title}
               subtitle={project.subtitle}
+              link={project.link}
             />
           ))}
         </div>
@@ -95,6 +104,7 @@ export function Projects() {
               key={index}
               image={project.image}
               title={project.title}
+              link={project.link}
             />
           ))}
         </div>
@@ -103,39 +113,45 @@ export function Projects() {
   );
 }
 
-function ProjectSoftware({ image, title, subtitle }) {
+function ProjectSoftware({ image, title, subtitle, link }) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center hover:scale-105">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-48 object-cover rounded-md mb-4"
-      />
-      <div className="flex flex-col md:flex-row md:justify-between w-full">
-        <div className="font-museomoderno">
-          <h4 className="text-lg lowercase font-bold text-main">{title}</h4>
-          <p className="text-sm lowercase text-main font-regular">{subtitle}</p>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center hover:scale-105">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-48 object-cover rounded-md mb-4"
+        />
+        <div className="flex flex-col md:flex-row md:justify-between w-full">
+          <div className="font-museomoderno">
+            <h4 className="text-lg lowercase font-bold text-main">{title}</h4>
+            <p className="text-sm lowercase text-main font-regular">
+              {subtitle}
+            </p>
+          </div>
+          <Button>ver mais</Button>
         </div>
-        <Button>ver mais</Button>
       </div>
-    </div>
+    </a>
   );
 }
 
-function ProjectDesign({ image, title }) {
+function ProjectDesign({ image, title, link }) {
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center hover:scale-105">
-      <img
-        src={image}
-        alt={title}
-        className="w-full h-48 object-cover rounded-md mb-4"
-      />
-      <div className="flex flex-col md:flex-row md:justify-between w-full">
-        <h4 className="font-museomoderno text-lg lowercase font-bold text-main">
-          {title}
-        </h4>
-        <Button>ver mais</Button>
+    <a href={link} target="_blank" rel="noopener noreferrer">
+      <div className="bg-white p-4 rounded-lg shadow-md flex flex-col items-center hover:scale-105">
+        <img
+          src={image}
+          alt={title}
+          className="w-full h-48 object-cover rounded-md mb-4"
+        />
+        <div className="flex flex-col md:flex-row md:justify-between w-full">
+          <h4 className="font-museomoderno text-lg lowercase font-bold text-main">
+            {title}
+          </h4>
+          <Button>ver mais</Button>
+        </div>
       </div>
-    </div>
+    </a>
   );
 }
