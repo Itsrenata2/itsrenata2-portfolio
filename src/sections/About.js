@@ -3,6 +3,20 @@ import instagramIcon from "../images/instagram.svg";
 import githubIcon from "../images/github.svg";
 
 export function About() {
+  const birthYear = 2003;
+  const birthMonth = 3;
+  const birthDay = 22;
+
+  const today = new Date();
+  let age = today.getFullYear() - birthYear;
+
+  if (
+    today.getMonth() < birthMonth ||
+    (today.getMonth() === birthMonth && today.getDate() < birthDay)
+  ) {
+    age--;
+  }
+
   return (
     <main
       id="sobre"
@@ -36,23 +50,31 @@ export function About() {
             <img src={instagramIcon} alt="instagram icon" />
           </a>
         </div>
-        <p className="text-main font-semibold font-poppins text-sm md:text-base">
-          Bem vindo(a) ao meu portfolio, meu interesse pela tecnologia me
-          levaram a desenvolver conhecimentos sólidos em HTML, CSS e estou me
-          aprimorando cada vez mais no JavaScript, além de estudos em C. Até o
-          momento, tive a oportunidade de aplicar essas tecnologias em projetos
-          práticos, o que me proporcionou novas experiências na área. <br />
+        <p className="text-main font-semibold font-poppins text-sm text-justify md:text-base">
+          Profissional com experiência em desenvolvimento Front-End, criação de
+          interfaces responsivas e design de materiais gráficos. Atuo na
+          implementação de soluções digitais aplicando HTML, CSS, JavaScript e
+          Tailwind CSS, com foco em usabilidade, performance e resultados
+          mensuráveis. <br />
+          <br />✅ Desenvolvimento de landing pages e design de interfaces{" "}
           <br />
-          Minhas habilidades vão além do conhecimento técnico, e destaco minha
-          organização, dedicação e liderança como atributos que me ajudam a
-          atingir resultados de qualidade. <br /> <br />
-          Também possuo habilidades interpessoais e fluência em inglês, o que me
-          permite colaborar efetivamente em equipes multiculturais e me
-          comunicar com pessoas de diferentes nacionalidades.
+          🖌 Gestão de conteúdo digital e mídias sociais <br />
+          📊 Organização, dedicação e liderança em projetos e equipes <br />
+          🌐 Fluência em inglês e colaboração em ambientes multiculturais <br />
+          <br />
+          🛠 Competências Técnicas <br />✔ HTML, CSS, JavaScript, Tailwind CSS{" "}
+          <br />✔ Design de interfaces e materiais gráficos: Figma <br />✔
+          Pacote Office intermediário (Word, PowerPoint, Excel) <br />✔
+          Planejamento, organização e resolução de problemas <br />
+          <br />
+          📌 Experiência Relevante <br />✔ Projetos práticos como freelancer em
+          desenvolvimento e design <br />✔ Assistente administrativa e de
+          marketing com foco em resultados <br />✔ Aprendizado contínuo e rápida
+          adaptação a novas tecnologias
         </p>
       </div>
       <div className="flex flex-col gap-4 w-full md:w-5/12 mt-8 md:mt-0 text-sm">
-        <InfoWithColor>idade: 21</InfoWithColor>
+        <InfoWithColor>idade: {age}</InfoWithColor>
         <InfoWithoutColor>nacionalidade: brasileira</InfoWithoutColor>
         <InfoWithColor>email: renatasilva2222@hotmail.com</InfoWithColor>
         <InfoWithoutColor>endereço: salvador, bahia</InfoWithoutColor>

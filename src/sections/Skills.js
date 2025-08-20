@@ -76,7 +76,7 @@ export function Skills() {
 
 function Skill({ icon, title, text }) {
   return (
-    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start group">
+    <div className="bg-white shadow-lg rounded-2xl p-8 flex flex-col items-start group hover:scale-105">
       <img
         src={icon}
         alt={title}
